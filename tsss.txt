@@ -1,0 +1,20 @@
+/**
+ * @jest-environment jsdom
+ */
+
+import React from "react";
+import { cleanup, render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import {Board} from "../Board"
+import { BoardProps } from "../Board";
+
+it("snapshot",async ()=>{
+    const boardProps: BoardProps = {
+        board: [], // pass your board array here
+        handleClick: jest.fn(), // pass your handleClick function here
+      };
+    const {container} = render(<Board {...boardProps}/>)
+
+    expect(container.querySelector(".reset")).toMatchSnapshot();
+
+})

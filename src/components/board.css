@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.board{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-row{
+    display: flex;
+}
+
+.cell{
+    width: 6rem;
+    height: 10vh;
+    background: rgb(203, 203, 203);
+    border: none;
+    margin: 3px;
+}
+
+.cell:hover{
+    background: rgb(233, 233, 233);
+    transition: .2s;
+    cursor: hover;
+}
+
+.reset-button{
+    font-family: "Montserrat";
+    margin-top: 10px;
+    background: lightgray;
+    border: none;
+    padding:4px 12px 4px 12px;
+}
